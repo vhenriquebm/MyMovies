@@ -53,4 +53,5 @@ final class LoginViewModelTests: XCTestCase {
     func testEmailWithUppercaseLetters() {
         XCTAssertTrue(viewModel.isValidEmail("USER@EMAIL.COM"))
     }
+    //
 }

@@ -11,14 +11,16 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Xcode
-      run: sudo xcode-select -s /Applications/Xcode_15.2.app  # ou outro, dependendo da sua versão
+      - name: Set Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_15.2.app
 
-    - name: Build project
-      run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' clean build
+      - name: Build project
+        run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' clean build
+        working-directory: ./MyMovies
 
-    - name: Run tests
-      run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' test
+      - name: Run tests
+        run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' test
+        working-directory: ./MyMovies
