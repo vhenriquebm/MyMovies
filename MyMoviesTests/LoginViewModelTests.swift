@@ -54,4 +54,5 @@ final class LoginViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.isValidEmail("USER@EMAIL.COM"))
     }
     //
+    //
 }

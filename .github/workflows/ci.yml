@@ -19,8 +19,6 @@ jobs:
 
       - name: Build project
         run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' clean build
-        working-directory: ./MyMovies
 
       - name: Run tests
         run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' test
-        working-directory: ./MyMovies
