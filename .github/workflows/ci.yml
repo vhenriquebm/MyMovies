@@ -1,0 +1,24 @@
+name: Build & Test iOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.2.app  # ou outro, dependendo da sua versão
+
+    - name: Build project
+      run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' clean build
+
+    - name: Run tests
+      run: xcodebuild -scheme MyMovies -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.2' test

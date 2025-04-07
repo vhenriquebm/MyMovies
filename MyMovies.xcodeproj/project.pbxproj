@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		420C27D42DA495F8000CC23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420C27B12DA490B4000CC23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 420C27B82DA490B4000CC23C;
+			remoteInfo = MyMovies;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		420C27B92DA490B4000CC23C /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		420C27D02DA495F7000CC23C /* MyMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = MyMovies;
 			sourceTree = "<group>";
 		};
+		420C27D12DA495F8000CC23C /* MyMoviesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyMoviesTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		420C27B62DA490B4000CC23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420C27CD2DA495F7000CC23C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				420C27BB2DA490B4000CC23C /* MyMovies */,
+				420C27D12DA495F8000CC23C /* MyMoviesTests */,
 				420C27BA2DA490B4000CC23C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				420C27B92DA490B4000CC23C /* MyMovies.app */,
+				420C27D02DA495F7000CC23C /* MyMoviesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 420C27B92DA490B4000CC23C /* MyMovies.app */;
 			productType = "com.apple.product-type.application";
 		};
+		420C27CF2DA495F7000CC23C /* MyMoviesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420C27D62DA495F8000CC23C /* Build configuration list for PBXNativeTarget "MyMoviesTests" */;
+			buildPhases = (
+				420C27CC2DA495F7000CC23C /* Sources */,
+				420C27CD2DA495F7000CC23C /* Frameworks */,
+				420C27CE2DA495F7000CC23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				420C27D52DA495F8000CC23C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				420C27D12DA495F8000CC23C /* MyMoviesTests */,
+			);
+			name = MyMoviesTests;
+			packageProductDependencies = (
+			);
+			productName = MyMoviesTests;
+			productReference = 420C27D02DA495F7000CC23C /* MyMoviesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					420C27B82DA490B4000CC23C = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					420C27CF2DA495F7000CC23C = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 420C27B82DA490B4000CC23C;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				420C27B82DA490B4000CC23C /* MyMovies */,
+				420C27CF2DA495F7000CC23C /* MyMoviesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		420C27B72DA490B4000CC23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420C27CE2DA495F7000CC23C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		420C27CC2DA495F7000CC23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		420C27D52DA495F8000CC23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 420C27B82DA490B4000CC23C /* MyMovies */;
+			targetProxy = 420C27D42DA495F8000CC23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		420C27C52DA490B6000CC23C /* Debug */ = {
@@ -302,6 +377,42 @@
 			};
 			name = Release;
 		};
+		420C27D72DA495F8000CC23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CTDN3273R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.vhenriquebm.MyMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMovies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyMovies";
+			};
+			name = Debug;
+		};
+		420C27D82DA495F8000CC23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CTDN3273R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.vhenriquebm.MyMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMovies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyMovies";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +430,15 @@
 			buildConfigurations = (
 				420C27C82DA490B6000CC23C /* Debug */,
 				420C27C92DA490B6000CC23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420C27D62DA495F8000CC23C /* Build configuration list for PBXNativeTarget "MyMoviesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420C27D72DA495F8000CC23C /* Debug */,
+				420C27D82DA495F8000CC23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
